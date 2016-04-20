@@ -1,9 +1,9 @@
-name 'np-scaffold'
+name 'np-workstation'
 maintainer 'Nick Pegg'
 maintainer_email 'nick@nickpegg.com'
 license 'all_rights'
-description 'Installs/Configures np-scaffold'
-long_description 'Installs/Configures np-scaffold'
+description 'Sets up a workstation'
+long_description 'Sets up a workstation'
 version '0.1.0'
 
 supports 'debian', '~> 8.0'

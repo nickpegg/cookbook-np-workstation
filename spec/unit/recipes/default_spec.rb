@@ -1,16 +1,20 @@
 #
-# Cookbook Name:: np-scaffold
+# Cookbook Name:: np-workstation
 # Spec:: default
 #
 # Copyright (c) 2015 Nick Pegg, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'np-scaffold::default' do
+describe 'np-workstation::default' do
   before do
     common_stubs
-    @chef_run = memoized_runner(described_recipe)
   end
 
-  subject { @chef_run }
+  subject { memoized_runner(described_recipe) }
+
+  it { is_expected.to install_package 'pass' }
+  it { is_expected.to install_package 'virtualbox' }
+
+  it { is_expected.to include_recipe 'np-workstation::keyboard' }
 end
