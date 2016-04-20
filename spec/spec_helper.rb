@@ -13,7 +13,7 @@ module SpecHelper
 
   def memoized_runner(recipe)
     @@runner[recipe] ||= begin
-      runner = ChefSpec::SoloRunner.new
+      runner = ChefSpec::SoloRunner.new(platform: 'debian', version: '8.2')
       runner.converge recipe
     end
   end
