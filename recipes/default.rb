@@ -9,4 +9,7 @@
 package 'virtualbox'
 package 'pass'
 
+include_recipe 'atom'
+include_recipe 'chef-dk'
+
 include_recipe 'np-workstation::keyboard'

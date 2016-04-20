@@ -16,5 +16,8 @@ describe 'np-workstation::default' do
   it { is_expected.to install_package 'pass' }
   it { is_expected.to install_package 'virtualbox' }
 
+  it { is_expected.to include_recipe 'atom' }
+  it { is_expected.to include_recipe 'chef-dk' }
+
   it { is_expected.to include_recipe 'np-workstation::keyboard' }
 end
