@@ -8,7 +8,7 @@
 XKBMODEL="<%= @config[:model] %>"
 XKBLAYOUT="<%= @config[:layout] %>"
 XKBVARIANT=""
-XKBOPTIONS="<%= @config[:options].join(' ') %>"
+XKBOPTIONS="<%= @config[:options].join(',') %>"
 
 # If you don't want to use the XKB layout on the console, you can
 # specify an alternative keymap.  Make sure it will be accessible

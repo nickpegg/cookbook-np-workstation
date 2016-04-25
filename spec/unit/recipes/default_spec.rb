@@ -13,11 +13,12 @@ describe 'np-workstation::default' do
 
   subject { memoized_runner(described_recipe) }
 
+  it { is_expected.to install_package 'i3' }
   it { is_expected.to install_package 'pass' }
-  it { is_expected.to install_package 'virtualbox' }
 
-  it { is_expected.to include_recipe 'atom' }
   it { is_expected.to include_recipe 'chef-dk' }
+  it { is_expected.to include_recipe 'virtualbox' }
 
+  it { is_expected.to include_recipe 'np-workstation::atom' }
   it { is_expected.to include_recipe 'np-workstation::keyboard' }
 end
