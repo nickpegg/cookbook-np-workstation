@@ -7,8 +7,8 @@ long_description 'Sets up a workstation'
 version '0.1.3'
 
 depends 'apt'
-depends 'atom'
 depends 'chef-dk'
+depends 'chrome'
 depends 'virtualbox'
 
 supports 'debian', '~> 8.0'

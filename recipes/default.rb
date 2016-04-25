@@ -11,6 +11,7 @@ package 'pass'
 package 'vim'
 
 include_recipe 'chef-dk'
+include_recipe 'chrome'
 include_recipe 'virtualbox'
 
 include_recipe 'np-workstation::atom'

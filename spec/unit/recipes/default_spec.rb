@@ -18,6 +18,7 @@ describe 'np-workstation::default' do
   it { is_expected.to install_package 'vim' }
 
   it { is_expected.to include_recipe 'chef-dk' }
+  it { is_expected.to include_recipe 'chrome' }
   it { is_expected.to include_recipe 'virtualbox' }
 
   it { is_expected.to include_recipe 'np-workstation::atom' }

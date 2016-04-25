@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'np-workstation::default' do
-  %w(atom chefdk i3 pass vim virtualbox-5.0).each do |pkg|
+  %w(atom chefdk i3 google-chrome-stable pass vim virtualbox-5.0).each do |pkg|
     describe package pkg do
       it { is_expected.to be_installed }
     end
