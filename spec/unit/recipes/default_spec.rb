@@ -15,6 +15,7 @@ describe 'np-workstation::default' do
 
   it { is_expected.to install_package 'i3' }
   it { is_expected.to install_package 'pass' }
+  it { is_expected.to install_package 'vim' }
 
   it { is_expected.to include_recipe 'chef-dk' }
   it { is_expected.to include_recipe 'virtualbox' }

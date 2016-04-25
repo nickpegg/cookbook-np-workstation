@@ -8,6 +8,7 @@ include_recipe 'apt'
 
 package 'i3'
 package 'pass'
+package 'vim'
 
 include_recipe 'chef-dk'
 include_recipe 'virtualbox'
