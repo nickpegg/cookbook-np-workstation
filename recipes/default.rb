@@ -7,6 +7,7 @@
 include_recipe 'apt'
 
 package 'i3'
+package 'jq'
 package 'pass'
 package 'vim'
 

@@ -14,6 +14,7 @@ describe 'np-workstation::default' do
   subject { memoized_runner(described_recipe) }
 
   it { is_expected.to install_package 'i3' }
+  it { is_expected.to install_package 'jq' }
   it { is_expected.to install_package 'pass' }
   it { is_expected.to install_package 'vim' }
 
