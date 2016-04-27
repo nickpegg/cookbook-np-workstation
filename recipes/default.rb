@@ -9,6 +9,7 @@ include_recipe 'apt'
 package 'i3'
 package 'jq'
 package 'pass'
+package 'xbacklight'
 package 'vim'
 
 include_recipe 'chef-dk'
