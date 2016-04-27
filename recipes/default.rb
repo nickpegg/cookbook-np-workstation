@@ -17,3 +17,4 @@ include_recipe 'virtualbox'
 
 include_recipe 'np-workstation::atom'
 include_recipe 'np-workstation::keyboard'
+include_recipe 'np-workstation::yubikey'
