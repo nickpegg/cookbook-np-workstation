@@ -1,0 +1,8 @@
+require 'spec_helper'
+
+describe 'np-workstation::grub' do
+  describe file '/etc/default/grub' do
+    it { is_expected.to contain 'GRUB_HIDDEN_TIMEOUT_QUIET=false' }
+    it { is_expected.to contain 'GRUB_CMDLINE_LINUX_DEFAULT=""' }
+  end
+end
