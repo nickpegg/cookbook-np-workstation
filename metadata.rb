@@ -4,7 +4,7 @@ maintainer_email 'nick@nickpegg.com'
 license 'all_rights'
 description 'Sets up a workstation'
 long_description 'Sets up a workstation'
-version '0.1.6'
+version '0.1.7'
 
 depends 'apt'
 depends 'chef-dk'

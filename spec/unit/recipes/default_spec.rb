@@ -17,6 +17,7 @@ describe 'np-workstation::default' do
   it { is_expected.to install_package 'jq' }
   it { is_expected.to install_package 'pass' }
   it { is_expected.to install_package 'xbacklight' }
+  it { is_expected.to install_package 'vagrant' }
   it { is_expected.to install_package 'vim' }
 
   it { is_expected.to include_recipe 'chef-dk' }

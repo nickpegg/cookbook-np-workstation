@@ -10,6 +10,7 @@ package 'i3'
 package 'jq'
 package 'pass'
 package 'xbacklight'
+package 'vagrant'
 package 'vim'
 
 include_recipe 'chef-dk'
