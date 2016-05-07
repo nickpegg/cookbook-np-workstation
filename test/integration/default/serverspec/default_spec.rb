@@ -4,6 +4,7 @@ describe 'np-workstation::default' do
   %w(
     atom
     chefdk
+    docker-engine
     i3
     jq
     google-chrome-stable

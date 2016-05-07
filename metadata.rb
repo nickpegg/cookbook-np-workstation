@@ -4,11 +4,12 @@ maintainer_email 'nick@nickpegg.com'
 license 'all_rights'
 description 'Sets up a workstation'
 long_description 'Sets up a workstation'
-version '0.1.9'
+version '0.2.0'
 
 depends 'apt'
 depends 'chef-dk'
 depends 'chrome'
+depends 'docker'
 depends 'virtualbox'
 
 supports 'debian', '~> 8.0'
