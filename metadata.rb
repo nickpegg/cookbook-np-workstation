@@ -4,7 +4,7 @@ maintainer_email 'nick@nickpegg.com'
 license 'all_rights'
 description 'Sets up a workstation'
 long_description 'Sets up a workstation'
-version '0.1.8'
+version '0.1.9'
 
 depends 'apt'
 depends 'chef-dk'
@@ -13,3 +13,4 @@ depends 'virtualbox'
 
 supports 'debian', '~> 8.0'
 supports 'ubuntu', '= 14.04'
+supports 'ubuntu', '= 16.04'
