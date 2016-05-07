@@ -8,4 +8,5 @@ describe 'np-workstation::grub' do
   subject { memoized_runner(described_recipe) }
 
   it { is_expected.to create_cookbook_file '/etc/default/grub' }
+  it { is_expected.to create_cookbook_file '/usr/share/plymouth/themes/ubuntu-logo/ubuntu-logo.grub' }
 end
