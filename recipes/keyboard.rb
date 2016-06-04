@@ -1,3 +1,5 @@
+package 'console-setup'
+
 template '/etc/default/keyboard' do
   owner 'root'
   group 'root'

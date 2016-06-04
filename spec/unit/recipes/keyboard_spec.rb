@@ -7,10 +7,6 @@
 require 'spec_helper'
 
 describe 'np-workstation::keyboard' do
-  before do
-    common_stubs
-  end
-
   subject { memoized_runner(described_recipe) }
 
   it do

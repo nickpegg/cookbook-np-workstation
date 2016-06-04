@@ -7,16 +7,12 @@
 require 'spec_helper'
 
 describe 'np-workstation::default' do
-  before do
-    common_stubs
-  end
-
   let(:version) { '1.7.2' }
   let(:checksum) { '0383cda303e910829f24a2acc13fcdcbca735c99cb44299183c93eb9d40f18f4' }
   let(:url) { "https://atom-installer.github.com/v#{version}/atom-amd64.deb" }
   let(:cache_path) { ::File.join(Chef::Config[:file_cache_path], 'atom.deb') }
 
-  subject { memoized_runner(described_recipe) }
+  subject { memoized_runner(described_recipe, '', platform: 'debian', version: '8.0') }
 
   it do
     is_expected.to create_remote_file(cache_path).with(

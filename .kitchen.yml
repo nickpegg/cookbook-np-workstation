@@ -1,9 +1,8 @@
 ---
 driver:
-  name: vagrant
-  customize:
-    memory: 1024
-    cpus: 4
+  name: docker
+  use_sudo: false
+  provision_command: apt-get install -y curl wget net-tools
 
 provisioner:
   name: chef_zero
@@ -12,11 +11,10 @@ provisioner:
 platforms:
   - name: debian-8.2
   - name: ubuntu-14.04
+  - name: ubuntu-16.04
 
 suites:
   - name: default
     run_list:
       - 'recipe[np-workstation]'
     attributes:
-      virtualbox:
-        version: 5.0

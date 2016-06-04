@@ -1,5 +1,5 @@
 Metrics/LineLength:
-  Max: 100
+  Max: 120
 
-Style/SingleSpaceBeforeFirstArg:
+Style/SpaceBeforeFirstArg:
   Enabled: false
