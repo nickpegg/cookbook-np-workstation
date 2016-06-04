@@ -9,13 +9,16 @@ cache:
 
 addons:
   apt:
-    packages: chefdk
+    sources:
+      - chef-current-trusty
+    packages:
+      - chefdk
 
 services:
   - docker
 
 before_script:
-  - chef gem install rubocop rspec kitchen-docker
+  - chef gem install fauxhai rubocop rspec kitchen-docker
 
 script:
   - chef exec rubocop

@@ -4,9 +4,9 @@
 Sets up a personal workstation the way I like it
 
 ## Personal Cookbook Notice
-This is a personal cookbook and I haven't really taken the care to generalize
-it. It's public in hopes that maybe it's of use to someone, either directly
-with its content or seeing how I do things with Chef.
+This is a very personal cookbook, you probably set up your workstation a little
+differently than I do, but at least you can get some ideas from this or use it
+as a starting point.
 
 ## Testing
 It's assumed that you have chefdk installed.

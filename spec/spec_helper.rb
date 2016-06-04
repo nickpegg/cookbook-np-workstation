@@ -13,7 +13,6 @@ module SpecHelper
   end
 
   def memoized_runner(recipe, context = '', options = {})
-
     @@runner["#{recipe} #{context}"] ||= begin
       runner = ChefSpec::SoloRunner.new(options)
       yield runner.node if block_given?
