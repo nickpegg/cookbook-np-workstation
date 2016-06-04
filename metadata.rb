@@ -1,9 +1,9 @@
 name 'np-workstation'
 maintainer 'Nick Pegg'
 maintainer_email 'nick@nickpegg.com'
-license 'all_rights'
-description 'Sets up a workstation'
-long_description 'Sets up a workstation'
+license 'MIT'
+description 'Sets up a workstation the way I like it'
+long_description 'Sets up a workstation the way I like it'
 version '0.2.0'
 
 depends 'apt'
