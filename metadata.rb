@@ -9,6 +9,7 @@ version '0.2.0'
 depends 'apt'
 depends 'chef-dk'
 depends 'chrome'
+depends 'docker'
 
 supports 'debian', '~> 8.0'
 supports 'ubuntu', '= 14.04'
