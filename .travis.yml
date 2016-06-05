@@ -17,12 +17,9 @@ addons:
 services:
   - docker
 
-before_script:
-  - chef gem install fauxhai rubocop rspec kitchen-docker
-
 script:
-  - chef exec rubocop
-  - chef exec rspec --color
-  - chef exec kitchen create -c8
-  - chef exec kitchen converge -c8
-  - chef exec kitchen verify
+  - bundle exec rubocop
+  - bundle exec rspec --color
+  # - bundle exec kitchen create -c8
+  # - bundle exec kitchen converge -c8
+  # - bundle exec kitchen verify

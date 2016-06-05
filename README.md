@@ -12,6 +12,8 @@ as a starting point.
 It's assumed that you have chefdk installed.
 
 ```bash
-chef exec rake
-chef exec kitchen test
+bundle install --path .bundle
+bundle exec rubocop
+bundle exec rspec
+bundle exec kitchen test
 ```
