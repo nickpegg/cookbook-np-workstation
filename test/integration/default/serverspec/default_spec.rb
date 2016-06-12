@@ -9,6 +9,7 @@ describe 'np-workstation::default' do
     jq
     google-chrome-stable
     pass
+    uswsusp
     vagrant
     vim
     virtualbox-5.0
