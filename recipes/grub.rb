@@ -6,18 +6,24 @@
 
 cookbook_file '/etc/default/grub' do
   source 'default-grub'
-  mode 0644
+  mode '0644'
   notifies :run, 'execute[update-grub]'
 end
 
-directory '/usr/share/plymouth/themes/ubuntu-logo' do
-  recursive true
-end
+if node['platform'] == 'ubuntu'
+  # package 'plymouth-themes'
+  package 'plymouth-label'
 
-cookbook_file '/usr/share/plymouth/themes/ubuntu-logo/ubuntu-logo.grub' do
-  source 'grub/plymouth'
-  mode 0644
-  notifies :run, 'execute[update-grub]'
+  directory '/usr/share/plymouth/themes/ubuntu-logo' do
+    recursive true
+  end
+
+  cookbook_file '/usr/share/plymouth/themes/ubuntu-logo/ubuntu-logo.grub' do
+    source 'grub/plymouth'
+    mode '0644'
+    notifies :run, 'execute[update-grub]'
+  end
+
 end
 
 execute 'update-grub' do

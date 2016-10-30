@@ -6,13 +6,16 @@ describe 'np-workstation::default' do
     chefdk
     docker-engine
     i3
+    imagemagick
     jq
     google-chrome-stable
     pass
+    scrot
     uswsusp
     vagrant
     vim
-    virtualbox-5.0
+    virtualbox-5.1
+    zsh
   ).each do |pkg|
     describe package pkg do
       it { is_expected.to be_installed }

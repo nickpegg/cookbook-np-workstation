@@ -7,7 +7,7 @@
 require 'spec_helper'
 
 describe 'np-workstation::virtualbox' do
-  let(:version) { '5.0' }
+  let(:version) { '5.1' }
   let(:key) { 'oracle_vbox.asc' }
 
   shared_examples 'virtualbox' do
@@ -21,8 +21,8 @@ describe 'np-workstation::virtualbox' do
   end
 
   subject do
-    memoized_runner(described_recipe) do |node|
-      node.set['lsb']['codename'] = 'trusty'
+    memoized_runner(described_recipe, '', platform: 'ubuntu', version: '14.04') do |node|
+      node.default['lsb']['codename'] = 'trusty'
     end
   end
 
@@ -34,7 +34,7 @@ describe 'np-workstation::virtualbox' do
     context 'Debian 8.0' do
       subject do
         memoized_runner(described_recipe, 'Debian 8.5', platform: 'debian', version: '8.0') do |node|
-          node.set['lsb']['codename'] = 'jessie'
+          node.default['lsb']['codename'] = 'jessie'
         end
       end
 
@@ -44,7 +44,7 @@ describe 'np-workstation::virtualbox' do
     context 'Ubuntu 16.04' do
       subject do
         memoized_runner(described_recipe, 'Ubuntu 16.04', platform: 'ubuntu', version: '16.04') do |node|
-          node.set['lsb']['codename'] = 'xenial'
+          node.default['lsb']['codename'] = 'xenial'
         end
       end
 
