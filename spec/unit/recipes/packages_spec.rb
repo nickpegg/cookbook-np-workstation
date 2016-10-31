@@ -22,5 +22,4 @@ describe 'np-workstation::packages' do
   it { is_expected.to install_package 'vagrant' }
   it { is_expected.to install_package 'vim' }
   it { is_expected.to install_package 'zsh' }
-
 end
