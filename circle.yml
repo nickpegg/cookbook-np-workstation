@@ -11,6 +11,5 @@ dependencies:
 
 test:
   override:
-    - bundle exec rubocop
     - bundle exec rspec --color
     # - bundle exec kitchen test -c4
