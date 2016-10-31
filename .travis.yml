@@ -18,7 +18,6 @@ services:
   - docker
 
 script:
-  - bundle exec rubocop
   - bundle exec rspec --color
   # - bundle exec kitchen create -c8
   # - bundle exec kitchen converge -c8

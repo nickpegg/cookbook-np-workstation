@@ -4,7 +4,7 @@ maintainer_email 'nick@nickpegg.com'
 license 'MIT'
 description 'Sets up a workstation the way I like it'
 long_description 'Sets up a workstation the way I like it'
-version '0.2.2'
+version '0.2.3'
 
 depends 'apt'
 depends 'chrome'
