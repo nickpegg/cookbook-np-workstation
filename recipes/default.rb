@@ -15,4 +15,4 @@ include_recipe 'np-workstation::yubikey'
 
 include_recipe 'np-workstation::packages'
 
-include_recipe 'np-workstation::acpi-backlight' if node['platform_version'] == '16.10'
+include_recipe 'np-workstation::acpi_backlight' if node['platform_version'] == '16.10'
