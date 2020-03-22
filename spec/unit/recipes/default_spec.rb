@@ -22,7 +22,6 @@ describe 'np-workstation::default' do
 
   it { is_expected.to include_recipe 'chrome' }
 
-  it { is_expected.to include_recipe 'np-workstation::atom' }
   it { is_expected.to include_recipe 'np-workstation::keyboard' }
   it { is_expected.to include_recipe 'np-workstation::packages' }
   it { is_expected.to include_recipe 'np-workstation::virtualbox' }

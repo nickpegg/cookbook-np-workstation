@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe 'np-workstation::default' do
   %w(
-    atom
     docker-ce
     i3
     imagemagick
