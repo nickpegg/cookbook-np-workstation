@@ -7,7 +7,7 @@
 require 'spec_helper'
 
 describe 'np-workstation::default' do
-  subject { memoized_runner(described_recipe, '', platform: 'debian', version: '8.0') }
+  subject { memoized_runner(described_recipe, '', platform: 'ubuntu', version: '18.04') }
 
   it { is_expected.to install_package 'i3' }
   it { is_expected.to install_package 'imagemagick' }

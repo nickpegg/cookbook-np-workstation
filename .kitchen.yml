@@ -14,10 +14,7 @@ provisioner:
   encrypted_data_bag_secret_key_path: 'test/integration/encrypted_data_bag_secret'
 
 platforms:
-  - name: boxcutter/debian8
-  - name: boxcutter/ubuntu1404
-  - name: boxcutter/ubuntu1604
-  - name: boxcutter/ubuntu1610
+  - name: ubuntu-19.10
 
 suites:
   - name: default

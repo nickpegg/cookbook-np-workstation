@@ -7,7 +7,7 @@
 require 'spec_helper'
 
 describe 'np-workstation::packages' do
-  subject { memoized_runner(described_recipe, '', platform: 'debian', version: '8.0') }
+  subject { memoized_runner(described_recipe, '', platform: 'ubuntu', version: '18.04') }
 
   it { is_expected.to add_apt_repository 'chef' }
 

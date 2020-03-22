@@ -2,10 +2,7 @@
 # Cookbook Name:: np-workstation
 # Recipe:: virtualbox
 #
-# Copyright (c) 2016 Nick Pegg, All Rights Reserved.
-
-# TODO: Port the key file logic to the virtualbox community cookbook and
-# hope they accept the PR
+# Copyright (c) 2016-2020 Nick Pegg, All Rights Reserved.
 
 include_recipe 'apt'
 
@@ -27,5 +24,5 @@ apt_repository 'oracle-virtualbox' do
   components ['contrib']
 end
 
-package "virtualbox-#{node[:np_workstation][:virtualbox][:version]}"
+package "virtualbox"
 package 'dkms'

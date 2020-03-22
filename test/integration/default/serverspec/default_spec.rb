@@ -3,8 +3,7 @@ require 'spec_helper'
 describe 'np-workstation::default' do
   %w(
     atom
-    chefdk
-    docker-engine
+    docker-ce
     i3
     imagemagick
     jq
@@ -14,7 +13,7 @@ describe 'np-workstation::default' do
     uswsusp
     vagrant
     vim
-    virtualbox-5.1
+    virtualbox
     zsh
   ).each do |pkg|
     describe package pkg do

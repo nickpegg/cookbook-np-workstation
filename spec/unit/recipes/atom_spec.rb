@@ -12,7 +12,7 @@ describe 'np-workstation::default' do
   let(:url) { "https://atom-installer.github.com/v#{version}/atom-amd64.deb" }
   let(:cache_path) { ::File.join(Chef::Config[:file_cache_path], 'atom.deb') }
 
-  subject { memoized_runner(described_recipe, '', platform: 'debian', version: '8.0') }
+  subject { memoized_runner(described_recipe, '', platform: 'ubuntu', version: '18.04') }
 
   it do
     is_expected.to create_remote_file(cache_path).with(
