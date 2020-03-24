@@ -6,10 +6,10 @@
 
 include_recipe 'apt'
 
-# Oracle switched to using a different key file for Debian >= 8 and Ubuntu >= 16.04
 release_major_version = node['platform_version'].split('.').first.to_i
 key_file = 'oracle_vbox.asc'
 
+# Oracle switched to using a different key file for Debian >= 8 and Ubuntu >= 16.04
 case node['platform']
 when 'debian'
   key_file = 'oracle_vbox_2016.asc' if release_major_version >= 8
@@ -24,5 +24,5 @@ apt_repository 'oracle-virtualbox' do
   components ['contrib']
 end
 
-package "virtualbox"
+package 'virtualbox'
 package 'dkms'

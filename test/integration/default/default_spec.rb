@@ -1,9 +1,9 @@
 %w(
   docker-ce
+  firefox
   i3
   imagemagick
   jq
-  google-chrome-stable
   pass
   scrot
   uswsusp
