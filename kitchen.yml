@@ -1,9 +1,8 @@
 ---
+verifier:
+  name: inspec
+
 driver:
-  # name: docker
-  # use_sudo: false
-  # provision_command:
-  #   - apt-get install -y curl wget net-tools
   name: vagrant
   customize:
     memory: 1024
@@ -11,7 +10,7 @@ driver:
 
 provisioner:
   name: chef_zero
-  encrypted_data_bag_secret_key_path: 'test/integration/encrypted_data_bag_secret'
+  product_name: cinc
 
 platforms:
   - name: ubuntu-19.10
