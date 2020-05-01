@@ -1,0 +1,2 @@
+include "/usr/share/kbd/keymaps/i386/qwerty/us.map"
+keycode 58 = Control

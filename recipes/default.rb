@@ -4,26 +4,44 @@
 #
 # Copyright (c) 2016-2020 Nick Pegg, All Rights Reserved.
 
-include_recipe 'np-workstation::grub'
-include_recipe 'np-workstation::keyboard'
-include_recipe 'np-workstation::yubikey'
+if node['platform'] == 'ubuntu'
+  include_recipe 'apt'
 
-include_recipe 'apt'
-package %w(
-  chromium-browser
+  include_recipe 'np-workstation::grub'
+  include_recipe 'np-workstation::keyboard_ubuntu'
+elsif node['platform'] == 'arch'
+  include_recipe 'np-workstation::keyboard_arch'
+end
+
+include_recipe 'np-workstation::yubikey'
+include_recipe 'np-workstation::xorg'
+
+base_packages = %w(
   firefox
-  i3
   imagemagick
   jq
   pass
   scrot
-  xbacklight
-  vagrant
   vim
   zsh
 )
 
-include_recipe 'np-workstation::virtualbox'
-docker_installation 'default'
+if node['platform'] == 'ubuntu'
+  base_packages << 'chromium-browser'
+else
+  base_packages << 'chromium'
+end
 
-include_recipe 'np-workstation::acpi_backlight' if node['platform_version'] == '16.10'
+base_packages.each do |pkg|
+  package pkg
+end
+
+include_recipe 'np-workstation::virtualbox'
+package 'vagrant'
+
+if node['platform'] == 'ubuntu'
+  docker_installation 'default'
+else
+  package 'docker'
+  package 'docker-compose'
+end

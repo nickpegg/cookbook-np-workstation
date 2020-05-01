@@ -1,3 +1,5 @@
+# Map Caps Lock as Control
+
 package 'console-setup'
 
 template '/etc/default/keyboard' do

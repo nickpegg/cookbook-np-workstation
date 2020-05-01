@@ -1,12 +1,9 @@
 %w(
-  docker-ce
   firefox
-  i3
   imagemagick
   jq
   pass
   scrot
-  uswsusp
   vagrant
   vim
   virtualbox
@@ -17,20 +14,38 @@
   end
 end
 
-describe file '/etc/default/keyboard' do
-  its('content') { is_expected.to match 'XKBOPTIONS="ctrl:nocaps,terminate:ctrl_alt_bksp"' }
-end
-
-%w(
-  /etc/acpi/intel-backlight.sh
-  /etc/acpi/events/screen-brightness-up
-  /etc/acpi/events/screen-brightness-down
-).each do |acpi_file|
-  describe file acpi_file do
-    if os[:release] == '16.10'
-      it { is_expected.to exist }
-    else
-      it { is_expected.to_not exist }
+if os.family == 'ubuntu'
+  %w(
+    docker-ce
+    i3
+    xorg
+  ).each do |pkg|
+    describe package pkg do
+      it { should be_installed }
     end
   end
+elsif os.family == 'arch'
+  %w(
+    docker
+    i3-wm
+    xorg-server
+    xf86-video-intel
+    mesa
+    vulkan-intel
+  ).each do |pkg|
+    describe package pkg do
+      it { should be_installed }
+    end
+  end
+end
+
+if os.family == 'ubuntu'
+  describe file '/etc/default/keyboard' do
+    its('content') { is_expected.to match 'XKBOPTIONS="ctrl:nocaps,terminate:ctrl_alt_bksp"' }
+  end
+elsif os.family == 'arch'
+end
+
+describe file '/etc/X11/xorg.conf.d/20-intel.conf' do
+  its('content') { is_expected.to match /Option\s+"DRI" "3"/ }
 end

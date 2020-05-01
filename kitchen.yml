@@ -13,6 +13,7 @@ provisioner:
   product_name: cinc
 
 platforms:
+  - name: nickpegg/archlinux-cinc
   - name: ubuntu-19.10
 
 suites:

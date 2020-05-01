@@ -4,6 +4,8 @@
 #
 # Copyright (c) 2016 Nick Pegg, All Rights Reserved.
 
+# Get rid of the Ubuntu boot splash screen
+
 cookbook_file '/etc/default/grub' do
   source 'default-grub'
   mode '0644'
