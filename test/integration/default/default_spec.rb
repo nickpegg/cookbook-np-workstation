@@ -14,7 +14,7 @@
   end
 end
 
-if os.family == 'ubuntu'
+if os.name == 'ubuntu'
   %w(
     docker-ce
     i3
@@ -24,7 +24,7 @@ if os.family == 'ubuntu'
       it { should be_installed }
     end
   end
-elsif os.family == 'arch'
+elsif os.name == 'arch'
   %w(
     docker
     i3-wm
@@ -39,13 +39,19 @@ elsif os.family == 'arch'
   end
 end
 
-if os.family == 'ubuntu'
+if os.name == 'ubuntu'
   describe file '/etc/default/keyboard' do
     its('content') { is_expected.to match 'XKBOPTIONS="ctrl:nocaps,terminate:ctrl_alt_bksp"' }
   end
-elsif os.family == 'arch'
+elsif os.name == 'arch'
 end
 
 describe file '/etc/X11/xorg.conf.d/20-intel.conf' do
   its('content') { is_expected.to match /Option\s+"DRI" "3"/ }
+end
+
+if os.name == 'arch'
+  describe service 'paccache.timer' do
+    it { should be_enabled }
+  end
 end

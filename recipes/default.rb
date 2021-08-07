@@ -45,3 +45,12 @@ else
   package 'docker'
   package 'docker-compose'
 end
+
+if node['platform'] == 'arch'
+  package 'pacman-contrib'
+
+  service 'paccache.timer' do
+    action :enable
+  end
+end
+
