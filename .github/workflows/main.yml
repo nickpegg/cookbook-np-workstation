@@ -15,6 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
+      - uses: leleliu008/github-actions-vagrant@v1
+        with:
+          mem: 1024
 
       - name: install gems
         run: bundle install
