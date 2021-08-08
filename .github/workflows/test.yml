@@ -23,10 +23,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: Install Chef
-        uses: actionshub/chef-install@main
-        with:
-          omnitruckUrl: https://omnitruck.cinc.sh/install.sh
+      # - name: Install Chef
+      #   uses: actionshub/chef-install@main
+      #   with:
+      #     omnitruckUrl: 'https://omnitruck.cinc.sh/install.sh'
       - name: Create
         run: bundle exec kitchen create -c4
       - name: Converge
