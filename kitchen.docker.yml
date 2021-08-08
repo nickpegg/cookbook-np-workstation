@@ -12,8 +12,11 @@ provisioner:
   product_name: cinc
 
 platforms:
-  # - name: arch
-  #   image: nickpegg/archlinux-kitchen-cinc
+  - name: arch-latest-docker
+    driver:
+      image: nickpegg/archlinux-kitchen-cinc
+      provision_command:
+        - pacman --noconfirm -Sy
   - name: ubuntu-20.04-docker
 
 suites:
