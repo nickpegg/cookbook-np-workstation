@@ -10,9 +10,6 @@ on:
       - main
       - master
 
-env:
-  KITCHEN_YAML: kitchen.docker.yml
-
 jobs:
   test:
     runs-on: ubuntu-latest
