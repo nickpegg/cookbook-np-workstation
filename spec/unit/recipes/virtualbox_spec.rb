@@ -16,7 +16,7 @@ describe 'np-workstation::virtualbox' do
         key: ["http://download.virtualbox.org/virtualbox/debian/#{key}"]
       )
     end
-    it { is_expected.to install_package "virtualbox" }
+    it { is_expected.to install_package 'virtualbox' }
     it { is_expected.to install_package 'dkms' }
   end
 
