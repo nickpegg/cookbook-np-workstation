@@ -7,21 +7,22 @@ require 'spec_helper'
 describe 'np-workstation::default' do
   subject { memoized_runner(described_recipe, '', platform: 'ubuntu', version: '18.04') }
 
-  it { is_expected.to install_package 'i3' }
-  it { is_expected.to install_package 'imagemagick' }
-  it { is_expected.to install_package 'jq' }
-  it { is_expected.to install_package 'pass' }
-  it { is_expected.to install_package 'scrot' }
-  it { is_expected.to install_package 'uswsusp' }
-  it { is_expected.to install_package 'xbacklight' }
-  it { is_expected.to install_package 'vagrant' }
-  it { is_expected.to install_package 'vim' }
-  it { is_expected.to install_package 'zsh' }
+  %w(
+    i3
+    imagemagick
+    jq
+    pass
+    scrot
+    xbacklight
+    vagrant
+    vim
+    zsh
+  ).each do |pkg_name|
+    it { is_expected.to install_package pkg_name }
+  end
 
-  it { is_expected.to include_recipe 'chrome' }
-
-  it { is_expected.to include_recipe 'np-workstation::keyboard' }
-  it { is_expected.to include_recipe 'np-workstation::packages' }
+  # TODO: split this into checking for ubuntu vs arch keyboard recipe
+  # it { is_expected.to include_recipe 'np-workstation::keyboard' }
   it { is_expected.to include_recipe 'np-workstation::virtualbox' }
   it { is_expected.to include_recipe 'np-workstation::yubikey' }
 end

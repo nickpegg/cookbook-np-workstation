@@ -4,7 +4,7 @@
 
 require 'spec_helper'
 
-describe 'np-workstation::keyboard' do
+describe 'np-workstation::keyboard_ubuntu' do
   subject { memoized_runner(described_recipe) }
 
   it do
