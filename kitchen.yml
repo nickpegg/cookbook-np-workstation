@@ -14,7 +14,7 @@ provisioner:
 
 platforms:
   - name: nickpegg/archlinux-cinc
-  - name: ubuntu-19.10
+  - name: ubuntu-20.04
 
 suites:
   - name: default

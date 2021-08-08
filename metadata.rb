@@ -10,4 +10,4 @@ depends 'apt'
 depends 'docker', '>=4.12.0'
 
 supports 'arch'
-supports 'ubuntu', '= 19.10'
+supports 'ubuntu', '= 20.04'
