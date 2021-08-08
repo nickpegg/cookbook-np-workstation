@@ -1,0 +1,23 @@
+---
+verifier:
+  name: inspec
+
+driver:
+  name: docker
+  privileged: true
+  run_command: /usr/lib/systemd/systemd
+
+provisioner:
+  name: chef_zero
+  product_name: cinc
+
+platforms:
+  # - name: arch
+  #   image: nickpegg/archlinux-kitchen-cinc
+  - name: ubuntu-20.04-docker
+
+suites:
+  - name: default
+    run_list:
+      - 'recipe[np-workstation]'
+    attributes:
