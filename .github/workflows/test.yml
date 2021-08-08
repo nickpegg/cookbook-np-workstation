@@ -21,8 +21,8 @@ jobs:
         with:
           bundler-cache: true
       - name: Create
-        run: bundle exec kitchen create -c4
+        run: bundle exec kitchen create --color -c4
       - name: Converge
-        run: bundle exec kitchen converge -c4
+        run: bundle exec kitchen converge --color -c4
       - name: Verify
-        run: bundle exec kitchen verify
+        run: bundle exec kitchen verify --color
