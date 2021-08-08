@@ -1,8 +1,6 @@
-#
-# Cookbook Name:: np-workstation
+# Copyright:: 2015 Nick Pegg
+# Cookbook:: np-workstation
 # Spec:: default
-#
-# Copyright (c) 2015 Nick Pegg, All Rights Reserved.
 
 require 'spec_helper'
 
@@ -21,8 +19,8 @@ describe 'np-workstation::keyboard' do
           'options' => %w(
             ctrl:nocaps
             terminate:ctrl_alt_bksp
-          )
-        }
+          ),
+        },
       }
     )
   end

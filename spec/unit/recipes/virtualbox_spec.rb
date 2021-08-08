@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: np-workstation
+# Cookbook:: np-workstation
 # Spec::virtualbox
 #
-# Copyright (c) 2016 Nick Pegg, All Rights Reserved.
+# Copyright:: (c) 2016 Nick Pegg, All Rights Reserved.
 
 require 'spec_helper'
 

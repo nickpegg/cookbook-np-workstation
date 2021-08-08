@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'berkshelf'
 gem 'chefspec'
+gem 'cookstyle'
 gem 'docker-api'
 gem 'fauxhai'
 gem 'kitchen-docker'

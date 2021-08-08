@@ -1,8 +1,6 @@
-#
-# Cookbook Name:: np-workstation
+# Copyright:: 2015 Nick Pegg
+# Cookbook:: np-workstation
 # Spec:: default
-#
-# Copyright (c) 2015 Nick Pegg, All Rights Reserved.
 
 require 'spec_helper'
 
