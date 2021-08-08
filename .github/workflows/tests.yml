@@ -1,4 +1,4 @@
-name: Kitchen tests
+name: Tests
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
       - master
 
 jobs:
-  test:
+  kitchen:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -26,3 +26,16 @@ jobs:
         run: bundle exec kitchen converge --color -c4
       - name: Verify
         run: bundle exec kitchen verify --color
+  style_and_unit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Cookstyle
+        run: bundle exec cookstyle
+      - name: RSpec
+        run: bundle exec rspec
