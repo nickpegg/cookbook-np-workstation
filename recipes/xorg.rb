@@ -1,12 +1,12 @@
 # Set up Xorg and Xorg accessories
 
-if node['platform'] == 'ubuntu'
+if platform?('ubuntu')
   packages = %w(
     xorg
     xbacklight
     i3
   )
-elsif node['platform'] == 'arch'
+elsif platform?('arch')
   packages = %w(
     xorg-server
     xorg-xauth

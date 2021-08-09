@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: np-workstation
+# Cookbook:: np-workstation
 # Spec::virtualbox
 #
-# Copyright (c) 2016 Nick Pegg, All Rights Reserved.
+# Copyright:: (c) 2016 Nick Pegg, All Rights Reserved.
 
 require 'spec_helper'
 
@@ -16,7 +16,7 @@ describe 'np-workstation::virtualbox' do
         key: ["http://download.virtualbox.org/virtualbox/debian/#{key}"]
       )
     end
-    it { is_expected.to install_package "virtualbox-#{version}" }
+    it { is_expected.to install_package 'virtualbox' }
     it { is_expected.to install_package 'dkms' }
   end
 

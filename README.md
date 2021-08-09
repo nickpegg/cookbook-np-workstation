@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nickpegg/cookbook-np-workstation.svg?branch=master)](https://travis-ci.org/nickpegg/cookbook-np-workstation)
+[![Kitchen tests](https://github.com/nickpegg/cookbook-np-workstation/actions/workflows/test.yml/badge.svg)](https://github.com/nickpegg/cookbook-np-workstation/actions/workflows/test.yml)
 
 # np-workstation
 Sets up a personal workstation the way I like it

@@ -1,15 +1,13 @@
 #
-# Cookbook Name:: np-workstation
+# Copyright:: 2016-2021 Nick Pegg
 # Recipe:: default
-#
-# Copyright (c) 2016-2020 Nick Pegg, All Rights Reserved.
+# Cookbook:: np-workstation
 
-if node['platform'] == 'ubuntu'
-  include_recipe 'apt'
-
+if platform?('ubuntu')
+  apt_update
   include_recipe 'np-workstation::grub'
   include_recipe 'np-workstation::keyboard_ubuntu'
-elsif node['platform'] == 'arch'
+elsif platform?('arch')
   include_recipe 'np-workstation::keyboard_arch'
 end
 
@@ -26,11 +24,11 @@ base_packages = %w(
   zsh
 )
 
-if node['platform'] == 'ubuntu'
-  base_packages << 'chromium-browser'
-else
-  base_packages << 'chromium'
-end
+base_packages << if platform?('ubuntu')
+                   'chromium-browser'
+                 else
+                   'chromium'
+                 end
 
 base_packages.each do |pkg|
   package pkg
@@ -39,18 +37,17 @@ end
 include_recipe 'np-workstation::virtualbox'
 package 'vagrant'
 
-if node['platform'] == 'ubuntu'
+if platform?('ubuntu')
   docker_installation 'default'
 else
   package 'docker'
   package 'docker-compose'
 end
 
-if node['platform'] == 'arch'
+if platform?('arch')
   package 'pacman-contrib'
 
   service 'paccache.timer' do
     action :enable
   end
 end
-

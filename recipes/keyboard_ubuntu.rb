@@ -8,7 +8,7 @@ template '/etc/default/keyboard' do
   mode '0644'
 
   variables(
-    config: node[:np_workstation][:keyboard]
+    config: node['np_workstation']['keyboard']
   )
 
   notifies :run, 'execute[reconfigure console-setup]'

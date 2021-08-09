@@ -1,8 +1,6 @@
-#
-# Cookbook Name:: np-workstation
+# Copyright:: 2016 Nick Pegg
+# Cookbook:: np-workstation
 # Recipe:: grub
-#
-# Copyright (c) 2016 Nick Pegg, All Rights Reserved.
 
 # Get rid of the Ubuntu boot splash screen
 
@@ -12,7 +10,7 @@ cookbook_file '/etc/default/grub' do
   notifies :run, 'execute[update-grub]'
 end
 
-if node['platform'] == 'ubuntu'
+if platform?('ubuntu')
   # package 'plymouth-themes'
   package 'plymouth-label'
 
