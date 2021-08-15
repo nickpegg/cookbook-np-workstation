@@ -15,11 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        suite:
+          - default
         os:
           - arch-latest
           - ubuntu-2004
-        suite:
-          - default
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
