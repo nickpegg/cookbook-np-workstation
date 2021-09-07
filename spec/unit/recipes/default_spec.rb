@@ -8,12 +8,10 @@ describe 'np-workstation::default' do
   subject { memoized_runner(described_recipe, '', platform: 'ubuntu', version: '18.04') }
 
   %w(
-    i3
     imagemagick
     jq
     pass
     scrot
-    xbacklight
     vagrant
     vim
     zsh

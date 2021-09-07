@@ -29,9 +29,7 @@ packages += %w(
   lightdm
 )
 
-packages.each do |pkg|
-  package pkg
-end
+package packages
 
 directory '/etc/X11/xorg.conf.d'
 

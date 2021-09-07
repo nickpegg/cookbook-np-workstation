@@ -12,7 +12,12 @@ elsif platform?('arch')
 end
 
 include_recipe 'np-workstation::yubikey'
-include_recipe 'np-workstation::xorg'
+
+if node['np-workstation']['graphics'] == 'xorg'
+  include_recipe 'np-workstation::xorg'
+elsif node['np-workstation']['graphics'] == 'wayland' && platform?('arch')
+  include_recipe 'np-workstation::wayland'
+end
 
 base_packages = %w(
   firefox
