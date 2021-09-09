@@ -15,6 +15,7 @@ platforms:
   - name: arch-latest
     driver:
       image: nickpegg/archlinux-kitchen-cinc
+      box: nickpegg/archlinux-kitchen-cinc
       provision_command:
         - pacman --noconfirm -Sy
   - name: ubuntu-20.04
