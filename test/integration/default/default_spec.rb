@@ -55,3 +55,9 @@ if os.name == 'arch'
     it { should be_enabled }
   end
 end
+
+describe file '/etc/systemd/logind.conf' do
+  it { should exist }
+  its('content') { should match /^HandleLidSwitchExternalPower=ignore/ }
+  its('content') { should match /^HandleLidSwitchDocked=ignore/ }
+end
