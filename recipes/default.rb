@@ -56,3 +56,9 @@ if platform?('arch')
     action :enable
   end
 end
+
+# Enable clamshell mode, where the lid can be closed but it doesn't go into
+# suspend if the monitor goes off.
+cookbook_file '/etc/systemd/logind.conf' do
+  source 'etc/systemd/logind.conf'
+end
