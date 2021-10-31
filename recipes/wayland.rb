@@ -22,12 +22,17 @@ end
 # aur_packages = %(
 #   greetd
 #   greetd-tuigreet
+#   greetd-wlgreet
 # )
 
 directory '/etc/greetd'
 
 cookbook_file '/etc/greetd/config.toml' do
   source 'etc/greetd/config.toml'
+end
+
+cookbook_file '/etc/greetd/sway-config' do
+  source 'etc/greetd/sway-config'
 end
 
 # TODO
