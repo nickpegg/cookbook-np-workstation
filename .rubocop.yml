@@ -1,8 +1,2 @@
 Layout/LineLength:
-  Max: 120
-
-Layout/SpaceBeforeFirstArg:
-  Enabled: false
-
-Style/FrozenStringLiteralComment:
-  Enabled: false
+  Max: 100

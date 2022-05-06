@@ -6,11 +6,7 @@ if platform?('ubuntu')
   apt_update
 
   # Oracle switched to using a different key file for Debian >= 8 and Ubuntu >= 16.04
-  key_file = if platform?('ubuntu')
-               'oracle_vbox_2016.asc'
-             else
-               'oracle_vbox.asc'
-             end
+  key_file = 'oracle_vbox_2016.asc'
 
   apt_repository 'oracle-virtualbox' do
     uri 'http://download.virtualbox.org/virtualbox/debian'
