@@ -6,6 +6,9 @@ driver:
   name: docker
   privileged: true
   run_command: /usr/lib/systemd/systemd
+  # ed25519 key, needed by newer OpenSSH
+  public_key: test/ssh_key.pub
+  private_key: test/ssh_key
 
 provisioner:
   name: chef_zero
