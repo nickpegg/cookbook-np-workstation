@@ -22,6 +22,9 @@ platforms:
       provision_command:
         - pacman --noconfirm -Syyu
   - name: ubuntu-20.04
+  - name: ubuntu-22.04
+    driver:
+      box: nickpegg/ubuntu-22.04
 
 suites:
   - name: default
