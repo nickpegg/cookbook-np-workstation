@@ -1,4 +1,4 @@
-[![Kitchen tests](https://github.com/nickpegg/cookbook-np-workstation/actions/workflows/test.yml/badge.svg)](https://github.com/nickpegg/cookbook-np-workstation/actions/workflows/test.yml)
+[![Tests](https://github.com/nickpegg/cookbook-np-workstation/actions/workflows/tests.yml/badge.svg)](https://github.com/nickpegg/cookbook-np-workstation/actions/workflows/tests.yml)
 
 # np-workstation
 Sets up a personal workstation the way I like it
