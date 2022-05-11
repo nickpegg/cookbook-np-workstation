@@ -39,6 +39,12 @@ elsif os.name == 'arch'
   end
 end
 
+# Github CLI
+describe file '/usr/bin/gh' do
+  it { should exist }
+  it { should be_executable }
+end
+
 if os.name == 'ubuntu'
   describe file '/etc/default/keyboard' do
     its('content') { is_expected.to match 'XKBOPTIONS="ctrl:nocaps,terminate:ctrl_alt_bksp"' }
